@@ -39,7 +39,7 @@ do{
 */
 
 // example
-var counter = 5;
+/*var counter = 5;
 
 while(counter != 0){
 	alert(counter);
@@ -47,5 +47,20 @@ while(counter != 0){
 }
 
 alert('Hello from loop');
+*/
+
+// (создание счетчика; условие; изменение)
+for(var i = 0; i < 10; i++){
+	if(i == 3){
+		console.warn('Step ' + i + ' was skipped');
+		continue;
+	}
+	if(i == 5){
+		console.error('Error happened on step ' + i)
+		break;
+	}
+	console.log(i);
+}
+
 
 
