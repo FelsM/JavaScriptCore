@@ -194,7 +194,7 @@ console.log(isIncluded)
 
 //SORT - Mutable
 
-var arr = [1,2,4,10,123,345]
+/*var arr = [1,2,4,10,123,345]
 var sortedArr = arr.sort(compare);
 console.log(arr);
 console.log(sortedArr);
@@ -204,11 +204,185 @@ function compare(a,b){
 	if(a == b) return 0;
 	if(a < b) return -1;
 }
+*/
+
+
+//Перебирающие методы массивов
+
+/*var arr = [1,2,3,4,5,222,123,545412,545];
+var arr2 = [3,5,2,1,2,3];
+// arr[0]
+//arr[arr.length-1]
 
 
 
 
+function checkOddEven(array){
+	for(var i = 0; i < array.length; i++){
+	// arr[i] = arr[i]+2;
+	// arr[i] += 2;
+	// -=2; *=2; /=2
+		if(array[i] % 2 == 0){
+			console.log(array[i] + ' - even');
+		}else{
+			console.log(array[i] + ' - odd');
+		}
+	}	
+}
+
+
+checkOddEven(arr);
+checkOddEven([1,2,2,3,45,12]);*/
+
+
+// FOREACH(function) - 
+//function(element,index,array) 
+
+/*var arr = [1,2,2,3,5,3,1,2,3,5,3,123,2];
+
+var forEachResult = arr.forEach(function(elem,i,arr){
+	console.log('-------------------')
+	console.log(elem);
+	// console.log(i);
+	// console.log(arr);
+})
+
+console.log(arr);
+console.log(forEachResult);*/
+
+
+// MAP(function)
+// function(element,index,array) 
+
+/*var arr = [1,2,2,3,5,3,1,2,3,5,3,123,2];
+
+var mapResult = arr.map(function(elem,i,arr){
+
+	return elem*2
+	// console.log(i);
+	// console.log(arr);
+})
+
+console.log(arr);
+console.log(mapResult);*/
+
+//FILTER
+// function(element,index,array)
+/*
+var arr = [12,3,4,5,3123,123,1234,54,12,4343,12112312,4312,431];
+var filteredArr = arr.filter(function(elem){
+	return elem > 100 // веренет только тот elem для которого условие true
+})
+
+console.log(arr);
+console.log(filteredArr);
+*/
+
+
+//REDUCE(function, initialValue) 
+// function(previousValue,element,index,array);
+//prev - последнее значение которое вернула function
+/*var arr = [1,2,3,4,5,6,7,8,9,10];
+
+var reduceArr = arr.reduce(function(prev,elem){
+	console.log(prev + ' - previous returned value');
+	console.log(elem + ' - elem value');
+	return prev+elem;
+},0)
+
+console.log('__________________________');
+console.log(reduceArr);
+*/
+// REDUCERIGHT(function, initialValue) - двигается справа на лево
+// function(previousValue,element,index,array);
+//prev - последнее значение которое вернула function
+
+/*var arr = [1,2,3,4,5,6,7,8,9,10];
+
+var reduceArr = arr.reduceRight(function(prev,elem){
+	console.log(prev + ' - previous returned value');
+	console.log(elem + ' - elem value');
+	return prev+elem;
+},0)
+
+console.log('__________________________');
+console.log(reduceArr);*/
 
 
 
+// Pollyfill
+// myOwnfilter
 
+/*function myOwnFilter(inputArray, condition){
+	var resultArr = [];
+	for(var i = 0; i < inputArray.length; i++){
+		if(inputArray[i] > condition){
+			resultArr.push(inputArray[i])
+		}
+	}
+
+	return resultArr
+}
+
+
+var arr = [12,3,4,5,3123,123,1234,54,12,4343,12112312,4312,431];
+var filteredArr = arr.filter(function(elem){
+	return elem > 100 // веренет только тот elem для которого условие true
+})
+
+console.log(arr);
+console.log(filteredArr);
+
+console.log(myOwnFilter(arr,100));
+
+*/
+
+
+// TwoDimensionalArray_____________________________________________________
+
+/*var matrix = [
+	[1,2,3,4],
+	[5,6,7,8],
+	[9,10,11,12]
+]
+
+console.log(matrix[0][0])
+
+
+console.log(matrix);
+
+
+function logArray(arr){
+	for(var i = 0; i < arr.length;i++){
+		for(var j = 0; j < arr[i].length; j++){
+			console.log(arr[i][j]);
+		}
+	}
+}
+
+function createTwoDimensionalArray(size){
+	var newArr = new Array(size);
+	for(var i = 0; i < newArr.length; i++){
+		newArr[i] = new Array(size);
+	}	
+	return newArr;
+}
+
+function fillTwoDimensionalArrayWithValue(arr,value, diagonalValue){
+	for(var i = 0; i < arr.length;i++){
+		for(var j = 0; j < arr[i].length; j++){
+			if(i == j){
+				arr[i][j] = diagonalValue;
+			}else{
+				arr[i][j] = value;
+			}	
+		}
+	}
+	return arr;
+}
+
+var matrixSize10 = createTwoDimensionalArray(10);
+console.log(matrixSize10);
+console.log(fillTwoDimensionalArrayWithValue(matrixSize10,0,1));
+
+*/

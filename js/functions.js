@@ -143,6 +143,35 @@ greet2();
 
 */
 
+// Функции обратного вызова (callback function)
+// a,b, function
+function calculator(a,b,activity){
+	var result = activity(a,b);
+	console.log(result);
+}
+
+function add(a,b){
+	return +a + +b
+}
+
+function sub(a,b){
+	return a - b
+}
+
+function multiply(a,b){
+	return a*b
+}
+
+function divide(a,b){
+	return a/b
+}
+
+calculator(4,5,add);
+calculator(10,3,sub);
+calculator(17,21,multiply);
+calculator(123,5,divide);
+
+
 
 
 
