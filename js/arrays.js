@@ -386,3 +386,26 @@ console.log(matrixSize10);
 console.log(fillTwoDimensionalArrayWithValue(matrixSize10,0,1));
 
 */
+
+
+
+
+var str = 'Hello';
+var str2 = 'World';
+str = str2;
+// str = 'asdasd';
+str2 = 'some message';
+
+console.log(str);
+console.log(str2);
+
+// Refference type
+var arr = [1,2,3,4];
+var arr2 = [5,6,7,8];
+
+arr = arr2;
+arr[3] = 123123;
+arr2[2] = 66788776;
+ 
+console.log(arr);
+console.log(arr2);
