@@ -126,7 +126,7 @@ console.log(Person.sayHello().sayFullName().name)
 
 // Costructor Functions
 
-function Person(name, sname, age, isMarried){
+/*function Person(name, sname, age, isMarried){
 	this.name = name;
 	this.sname = sname;
 	this.age = age;
@@ -156,7 +156,47 @@ for(var prop in Jack){
 		continue;
 	}
 	console.log(prop + ' - ' + Jack[prop]);
-}
+}*/
+
+
+
+//  Objects transformation
+
+// function Rectangle(name,width, height){
+// 	this.name = name;
+// 	this.width = width;
+// 	this.height = height;
+// 	this.getArea = function(){
+// 		return this.width*this.height
+// 	}
+// 	// работает при выводе обьъекта
+// 	// работает при арифметических опреациях(чиселнное преобразование) если valueOf не определен
+// 	this.toString = function(){
+// 		return this.name;			
+// 	}
+// 	// Работае при арифметических операциях(чиселнное преобразование)
+// 	this.valueOf = function(){
+// 		return this.getArea();
+// 	}
+// }
+
+// var Bathroom = new Rectangle('Bathroom', 20, 30);
+// var Kitchen = new Rectangle('Kitchen', 10,15);
+// // console.log(Bathroom)
+
+
+// // строковое приобразовани  toString()
+// // alert(Bathroom)
+// document.write(Bathroom);
+
+
+// // числовое преобразование valueOf()
+
+// var area = Bathroom + Kitchen;
+// console.log(area);
+
+
+
 
 
 
