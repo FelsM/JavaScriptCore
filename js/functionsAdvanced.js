@@ -121,7 +121,7 @@ foo();*/
 
 //  Loosing context (Потеря контекста)
 
-function Animal(name, age){
+/*function Animal(name, age){
 	// Фиксирование контекста
 	// var that = this;
 	this.name = name;
@@ -145,7 +145,7 @@ function greetGuests(guestName){
 
 
 var Dog = new Animal('Dog', 10);
-
+*/
 
 
 
@@ -166,13 +166,13 @@ setTimeout(Dog.sayHello.bind(Dog), 2000);
 
 // call(context, param1, param2,param3)
 
-greetGuests.call(Dog, 'Alex');
-
+/*greetGuests.call(Dog, 'Alex');
+*/
 
 //apply(context, [1,2,3,4,5])
 
 
-var arr = [1,2,434234,12312,-12312,312];
+/*var arr = [1,2,434234,12312,-12312,312];
 console.log(arr);
 
 var maxValue = Math.max.apply(null, arr);
@@ -181,7 +181,7 @@ var minValue = Math.min.apply(null, arr);
 
 console.log(maxValue);
 console.log(minValue);
-
+*/
 
 /*function logNumbers(){
 	var argsInStr = [].join.apply(arguments, ' < - >');
@@ -193,11 +193,146 @@ console.log(minValue);
 // Array.prototype
 // []
 
-console.log(Array.prototype.join.call('Hello world', '----'))
+// console.log(Array.prototype.join.call('Hello world', '----'));
 
 
 
-console.log([].concat.call('Hello', 'World'))
+// console.log([].concat.call('Hello', 'World'));
+
+
+// Converting arguments to array
+
+/*
+function logNumbers(){
+	var args = [].slice.call(arguments, 0).filter(function(el){
+		return el < 5;
+	});
+	console.log(args);
+	args.forEach(function(el){
+		console.log(el)
+	})
+}
+logNumbers(1,2,3,4,5,5,6,7,6,2);
+
+*/
+
+
+//return types
+
+
+// primitives
+/*function concatOrSum(a,b){
+	return a + b;
+}
+
+
+console.log(concatOrSum(1,2))
+console.log(concatOrSum('Hello','World'))
+
+// object
+
+
+var Parrot = {
+	name: 'James',
+	age: 1
+}*/
+
+
+//decorator - pattern
+//object
+/*function teach(obj){
+	obj.fly = function(){
+		alert('I am flying! bzzzz')
+	}
+	obj.sayHello = function(){
+		alert('Hello')
+	}
+	return obj
+}
+
+
+console.log(Parrot);
+
+teach(Parrot).sayHello();
+
+console.log(Parrot);
+
+*/
+
+
+//function
+
+/*function getExchangeRates(a,b){
+	 a = a*1,3;
+	 b = b*12;
+	 console.log('weight')
+	return function(){
+		var c = a + b;
+		console.log('sum');
+		return function(){
+			var d = Math.pow(c, 2)
+			console.log('pow')
+			return d
+		}
+	}
+}
+
+var weidghtedNumbers = getExchangeRates(1,3);
+var weightedSum = weidghtedNumbers();
+var powWeightedSum = weightedSum();*/
+
+
+
+// console.log(powWeightedSum);
+
+
+
+// IFE(Immediate Functional expressions) функции мгновенного вызова/выполненния
+
+//ICF(Immediate Call Functions)
+
+
+// (function (message){})()
+
+/*(function (a){
+	console.log(a)
+})(2);
+
+
+// (function (param){}())
+(function(asd){
+	console.log(asd)
+}('Hello'));*/
+
+/*
+for(var i = 0; i < 10; i++){
+	(function(index){
+		setTimeout(function(){
+			console.log(index);
+		}, 1000*index);
+	})(i)
+}*/
+
+
+// console.log(i);
+/*var a = 8;
+console.log(a)
+function logA(){
+	console.log(a)
+}
+logA();
+
+(function(){
+	var a = 4;
+	console.log(a)
+	function logA(){
+		console.log(a)
+	}
+	logA();
+})(window)
+
+*/
+
 
 
 
